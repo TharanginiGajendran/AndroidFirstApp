@@ -5,13 +5,15 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:gravity="center"
     tools:context=".MainActivity">
 
     <EditText
         android:id="@+id/et_user_name"
-        android:layout_width="match_parent"
+        android:layout_width= "wrap_content"
         android:layout_height="wrap_content"
         android:gravity="center"
+        android:textSize="18sp"
         android:hint="Enter Name" />
 
     <Button
@@ -28,7 +30,8 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:text="message"
-        android:textSize="24sp"/>
+        android:textColor="@color/design_default_color_error"
+        android:textSize="18sp"/>
 
 
 </LinearLayout>
