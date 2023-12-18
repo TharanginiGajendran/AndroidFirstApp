@@ -13,6 +13,5 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginTop="30sp"
-        android:textSize="24sp"
-        android:text="Hello Second Activity"/>
+        android:textSize="24sp"/>
 </LinearLayout>

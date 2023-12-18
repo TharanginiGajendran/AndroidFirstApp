@@ -12,9 +12,7 @@ class SecondActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_second)
 
-
-        var getName = findViewById<TextView>(R.id.getName)
-
+        val getName = findViewById<TextView>(R.id.getName)
         getName.text = "${intent.getStringExtra("name").toString()}, you will get more offers"
     }
 }
