@@ -1,7 +1,9 @@
 package com.example.day1androidrevision
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
@@ -21,18 +23,28 @@ class MainActivity : AppCompatActivity() {
         val enterName = findViewById<EditText>(R.id.et_user_name)
         val submitName = findViewById<Button>(R.id.submit_btn)
         val message = findViewById<TextView>(R.id.welcome_msg)
+        val nexBtn = findViewById<Button>(R.id.next_btn)
 
+        var name = ""
         submitName.setOnClickListener {
-            var name = enterName.text.toString()
+            name = enterName.text.toString()
             if (name == "") {
                 message.text = "The Name should not be empty"
                 Toast.makeText(this@MainActivity, "please enter your name", Toast.LENGTH_LONG)
                     .show()
+                nexBtn.visibility = View.INVISIBLE
             } else {
+                nexBtn.visibility = View.VISIBLE
                 var text = "Welcome ${name}"
                 message.text = text
                 enterName.text.clear()
             }
+        }
+
+        nexBtn.setOnClickListener {
+            val intent = Intent(this, SecondActivity::class.java)
+                intent.putExtra("name",name)
+            startActivity(intent)
         }
 
     }

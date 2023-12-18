@@ -5,16 +5,16 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:gravity="center"
     tools:context=".MainActivity">
 
     <EditText
         android:id="@+id/et_user_name"
-        android:layout_width= "wrap_content"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:gravity="center"
-        android:textSize="18sp"
-        android:hint="Enter Name" />
+        android:layout_gravity="center"
+        android:hint="Enter Name"
+        android:layout_marginTop="20dp"
+        android:textSize="18sp" />
 
     <Button
         android:id="@+id/submit_btn"
@@ -31,7 +31,23 @@
         android:layout_gravity="center"
         android:text="message"
         android:textColor="@color/design_default_color_error"
-        android:textSize="18sp"/>
+        android:textSize="18sp" />
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/next_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_marginTop="70dp"
+            android:layout_marginEnd="20dp"
+            android:visibility="gone"
+            android:text="View Offers" />
+
+    </LinearLayout>
 
 </LinearLayout>
